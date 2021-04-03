@@ -1,0 +1,36 @@
+<h2>Patient: <%= @patient.full_name %></h2>
+
+<div>
+  <h3>Nombre</h3>
+  <p><%= @patient.name %></p>
+</div>
+
+<div>
+  <h3>Apellidos</h3>
+  <p><%= @patient.last_name %></p>
+</div>
+
+<div>
+  <h3>Run</h3>
+  <p><%= @patient.run %></p>
+</div>
+
+<div>
+  <h3>Fecha de Nacimiento</h3>
+  <p><%= @patient.birth_date.strftime("%d/%m/%y") %></p>
+</div>
+
+<div>
+  <h3>Edad</h3>
+  <p><%= @patient.age %></p>
+</div>
+
+<div>
+  <%= link_to 'Editar', edit_patient_path(@patient) %>
+   | 
+  <%= link_to 'Eliminar', patient_path(@patient), method: :delete  %>  
+<div>
+
+<div>
+  <%= link_to 'Volver', patients_path %>
+<div>

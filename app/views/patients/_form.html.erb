@@ -1,0 +1,45 @@
+<%= form_with model: @patient, local: true do |form| %>
+ 
+  <% if @patient.errors.any? %>
+    <div>
+      <h2>
+        <%= pluralize(@patient.errors.count, "error") %> prohibited
+        this patient from being saved:
+      </h2>
+      <ul>
+        <% @patient.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+ 
+  <p>
+    Nombre:
+    <br>
+    <%= form.text_field :name %>
+  </p>
+ 
+  <p>
+    Apellidos:
+    <br>
+    <%= form.text_field :last_name %>
+  </p>
+
+  <p>
+    Run
+    <br>
+    <%= form.text_field :run %>
+  </p>
+
+  <p>
+    Fecha de Nacimiento:
+    <br>
+    <%= form.date_field :birth_date, max: Time.now %>
+  </p>
+ 
+  <p>
+    <%= form.submit %>
+  </p>
+ 
+<% end %>
