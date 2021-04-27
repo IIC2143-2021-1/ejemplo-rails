@@ -31,6 +31,8 @@
   <%= link_to 'Eliminar', patient_path(@patient), method: :delete  %>  
 <div>
 
+<%= render partial: "vaccinations/index", locals: {patient: @patient} %>
+
 <div>
   <%= link_to 'Volver', patients_path %>
 <div>

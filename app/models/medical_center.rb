@@ -1,0 +1,2 @@
+class MedicalCenter < ApplicationRecord
+end

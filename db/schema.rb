@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_31_154702) do
+ActiveRecord::Schema.define(version: 2021_04_27_202846) do
+
+  create_table "medical_centers", force: :cascade do |t|
+    t.string "name"
+    t.string "city"
+    t.string "commune"
+    t.string "address"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "patients", force: :cascade do |t|
     t.string "name"
@@ -19,6 +28,16 @@ ActiveRecord::Schema.define(version: 2021_03_31_154702) do
     t.date "birth_date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "vaccinations", force: :cascade do |t|
+    t.integer "patient_id"
+    t.integer "vaccine"
+    t.datetime "appointment_date"
+    t.boolean "first_dose"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["patient_id"], name: "index_vaccinations_on_patient_id"
   end
 
 end

@@ -1,8 +1,9 @@
 class Patient < ApplicationRecord
+  has_many :vaccinations
   validates :run, uniqueness: true
   validates :name, :last_name, :birth_date, :run, presence: true
   validates :name, :last_name, length: { minimum: 2 }
-  validates :run, format: { with: /\d{1,3}(?:\.\d{1,3}){2}-[\dkK]/ }
+  validates :run, format: { with: /\d{1,3}(?:\d{1,3}){2}-[\dkK]/ }
   validate :under_age_cannot_be_vaccinated
  
   def under_age_cannot_be_vaccinated

@@ -1,0 +1,20 @@
+<h2> Vacunas anteriores </h2>
+
+<div style="display: flex; flex-flow: row wrap; ">
+  <% if patient.vaccinations.empty? %>
+    <p>No tiene procesos anteriores</p>
+  <% else %>
+    <% patient.vaccinations.each do |vaccination| %>
+      <div style="border: solid 1px; width: 200px; padding: 10px; align-text: center; margin: 5px;">
+        <p><%= vaccination.vaccine %></h3>
+        <p><%= vaccination.appointment_date.strftime("%d/%m/%y") %></p>
+        <p><%= vaccination.first_dose ? 'primera dosis' : 'segunda dosis' %></p>
+      </div>
+    <% end %>
+  <% end %>
+</div>
+
+<% if patient.vaccinations.size < 2 %>
+<h2> Agregar nuevo proceso de vacunación </h2>
+<%= render partial: "vaccinations/form", locals: {patient: patient} %>
+<% end %>
