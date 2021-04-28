@@ -14,6 +14,6 @@ class VaccinationsController < ApplicationController
  
   private
     def vaccination_params
-      params.require(:vaccination).permit(:first_dose, :appointment_date)
+      params.require(:vaccination).permit(:first_dose, :appointment_date, :vaccine)
     end
 end

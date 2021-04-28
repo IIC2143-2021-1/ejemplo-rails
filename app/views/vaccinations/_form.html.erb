@@ -1,7 +1,7 @@
 <%= form_with(model: [ patient, patient.vaccinations.build ], local: true) do |form| %>
   <p> 
     vacuna
-    <%= form.select :vaccine, options_for_select(Vaccination.vaccines) %>
+    <%= form.select :vaccine, options_for_select(Vaccination.vaccines.keys) %>
   </p>
   <p>
     Fecha de vacunación

@@ -6,7 +6,7 @@
   <% else %>
     <% patient.vaccinations.each do |vaccination| %>
       <div style="border: solid 1px; width: 200px; padding: 10px; align-text: center; margin: 5px;">
-        <p><%= vaccination.vaccine %></h3>
+        <p><%= vaccination.vaccine %></p>
         <p><%= vaccination.appointment_date.strftime("%d/%m/%y") %></p>
         <p><%= vaccination.first_dose ? 'primera dosis' : 'segunda dosis' %></p>
       </div>
