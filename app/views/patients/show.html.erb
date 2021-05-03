@@ -1,35 +1,35 @@
 <div class="patient-details">
-  <h2>Patient: <%= @patient.full_name %></h2>
+  <h2><%= "#{t('activerecord.models.patient.one')} #{@patient.full_name}" %></h2>
 
   <div>
-    <h3>Nombre</h3>
+    <h3><%= t('activerecord.attributes.patient.name') %></h3>
     <p><%= @patient.name %></p>
   </div>
 
   <div>
-    <h3>Apellidos</h3>
+    <h3><%= t('activerecord.attributes.patient.last_name') %></h3>
     <p><%= @patient.last_name %></p>
   </div>
 
   <div>
-    <h3>Run</h3>
+    <h3><%= t('activerecord.attributes.patient.run') %></h3>
     <p><%= @patient.run %></p>
   </div>
 
   <div>
-    <h3>Fecha de Nacimiento</h3>
+    <h3><%= t('activerecord.attributes.patient.birth_date') %></h3>
     <p><%= @patient.birth_date.strftime("%d/%m/%y") %></p>
   </div>
 
   <div>
-    <h3>Edad</h3>
+    <h3><%= t('activerecord.attributes.patient.age') %></h3>
     <p><%= @patient.age %></p>
   </div>
 
   <div class="actions">
-    <%= link_to 'Editar', edit_patient_path(@patient), class: 'primary-button' %>
+    <%= link_to t('common.edit'), edit_patient_path(@patient), class: 'primary-button' %>
     | 
-    <%= link_to 'Eliminar', patient_path(@patient), method: :delete, class: 'primary-button' %>  
+    <%= link_to t('common.delete'), patient_path(@patient), method: :delete, class: 'primary-button' %>  
   </div>
 </div>
 
@@ -38,5 +38,5 @@
 </div>
 
 <div>
-  <%= link_to 'Volver', patients_path, class: 'primary-button' %>
+  <%= link_to t('common.back'), patients_path, class: 'primary-button' %>
 </div>

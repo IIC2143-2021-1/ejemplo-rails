@@ -1,19 +1,19 @@
 <div class="vaccination-form-container">
   <%= form_with(model: [ patient, patient.vaccinations.build ], local: true) do |form| %>
     <p> 
-      vacuna
+      <%= t('activerecord.attributes.vaccination.vaccine') %>
       <%= form.select :vaccine, options_for_select(Vaccination.vaccines.keys) %>
     </p>
     <p>
-      Fecha de vacunación
+      <%= t('activerecord.attributes.vaccination.appointment_date') %>
       <%= form.date_field :appointment_date, max: Time.now %>
     </p>
     <p>
-      ¿Primera dosis?
+      <%= t('activerecord.attributes.vaccination.first_dose') %>
       <%= form.check_box :first_dose %>
     </p>
     <p>
-      <%= form.submit 'Crear proceso', class: 'button full-width' %>
+      <%= form.submit nil, class: 'button full-width' %>
     </p>
   <% end %>
 </div>

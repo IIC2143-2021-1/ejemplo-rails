@@ -12,19 +12,19 @@
   <body>
     <div id="header">
       <div id="title">
-        <%= link_to 'Vacunación contra COVID', patients_path %>
+        <%= link_to t('common.main_title'), patients_path %>
       </div>
       <div id="nav">
-        <div class="nav-button"><%= link_to 'Add new Patient', new_patient_path %></div>
-        <div class="nav-button"><a href="/">Assistance</a></div>
-        <div class="nav-button"><a href="/">Learn about COVID</a></div>
+        <div class="nav-button"><%= link_to t('patients.new.title'), new_patient_path %></div>
+        <div class="nav-button"><a href="/"><%= t('common.assistance') %></a></div>
+        <div class="nav-button"><a href="/"><%= t('common.about') %></a></div>
       </div>
     </div>
     <div id="content">
       <%= yield %>
     </div>
     <div id="footer">
-      Esta aplicación está creada para el curso Ingeniería de Software 2021
+      <%= t('common.footer') %>
     </div>
   </body>
 </html>

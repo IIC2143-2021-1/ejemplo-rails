@@ -3,11 +3,10 @@
   <% if @patient.errors.any? %>
     <div>
       <h2>
-        <%= pluralize(@patient.errors.count, "error") %> prohibited
-        this patient from being saved:
+        <%= t('patients.form.error_message') %>
       </h2>
       <ul>
-        <% @patient.errors.full_messages.each do |msg| %>
+        <% @patient.errors.full_messages.each do |msg| %>:
           <li><%= msg %></li>
         <% end %>
       </ul>
@@ -15,25 +14,25 @@
   <% end %>
  
   <p>
-    Nombre:
+    <%= t('activerecord.attributes.patient.name') %>:
     <br>
     <%= form.text_field :name %>
   </p>
  
   <p>
-    Apellidos:
+    <%= t('activerecord.attributes.patient.last_name') %>:
     <br>
     <%= form.text_field :last_name %>
   </p>
 
   <p>
-    Run
+    <%= t('activerecord.attributes.patient.run') %>:
     <br>
     <%= form.text_field :run %>
   </p>
 
   <p>
-    Fecha de Nacimiento:
+    <%= t('activerecord.attributes.patient.birth_date') %>:
     <br>
     <%= form.date_field :birth_date, max: Time.now %>
   </p>

@@ -1,5 +1,5 @@
-<h2>Add new Patient</h2>
+<h2><%= t('.title') %></h2>
 
 <%= render 'form' %>
  
-<%= link_to 'Back', patients_path, class: 'primary-button' %>
+<%= link_to t('common.back'), patients_path, class: 'primary-button' %>

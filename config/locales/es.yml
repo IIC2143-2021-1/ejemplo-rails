@@ -1,0 +1,77 @@
+es:
+  common:
+    main_title: 'Vacunación contra COVID'
+    assistance: 'Asistencia'
+    about: Aprende sobre COVID
+    error:
+      one: error
+      other: errores
+    back: volver
+    edit: editar
+    delete: eliminar
+    footer: Esta aplicación está creada para el curso Ingeniería de Software 2021
+  patients:
+    show:
+      add_vaccinations: Agregar nuevo proceso de vacunación
+      no_vaccinations: No tiene procesos anteriores
+      vaccinations_title: Vacunas anteriores
+      first_dose: primera dosis
+      second_dose: segunda dosis
+    new:
+      title: Agregar Paciente
+    edit:
+      title: Editar Paciente
+    form:
+      error_message: No se pudo guardar al paciente porque
+  vaccinations:
+    add_vaccinations: Agregar nuevo proceso de vacunación
+    no_vaccinations: No tiene procesos anteriores
+    title: Vacunas anteriores
+    first_dose: primera dosis
+    second_dose: segunda dosis
+  errors:
+    error:
+      one: error
+      other: errores
+    format: "%{attribute} %{message}"
+    messages:
+      blank: 'no puede estar en blanco'
+      taken: 'ya está usado'
+      too_short: 'es muy corto'
+      too_long: 'es muy largo'
+      invalid: 'no valido'
+      model_invalid: 'La validación falló: %{errors}'
+  helpers:
+    select:
+      prompt: Seleccione
+    submit:
+      create: Crear %{model}
+      submit: Guardar %{model}
+      update: Actualizar %{model}
+  activerecord:
+    models:
+      patient:
+        one: Paciente
+        other: Pacientes
+      vaccination:
+        one: Vacunación
+        other: Vacunaciones
+      medical_center:
+        one: Centro Médico
+        other: Centros médicos
+    attributes:  
+      patient:
+        name: Nombre
+        last_name: Apellidos
+        run: Rut
+        birth_date: Fecha de nacimiento
+        age: Edad
+      vaccination:
+        vaccine: Vacuna
+        appointment_date: Fecha
+        first_dose: Primera dosis
+      medical_center:
+        name: Nombre
+        city: Ciudad
+        commune: Comuna
+        address: Dirección

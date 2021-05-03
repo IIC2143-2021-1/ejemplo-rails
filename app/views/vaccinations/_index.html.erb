@@ -1,20 +1,20 @@
-<h2> Vacunas anteriores </h2>
+<h2><%= t('vaccinations.title') %></h2>
 
 <div class="vaccinations">
   <% if patient.vaccinations.empty? %>
-    <p>No tiene procesos anteriores</p>
+    <p><%= t('vaccinations.no_vaccinations') %>s</p>
   <% else %>
     <% patient.vaccinations.each do |vaccination| %>
       <div class="vaccination-box">
         <p><%= vaccination.vaccine %></p>
         <p><%= vaccination.appointment_date.strftime("%d/%m/%y") %></p>
-        <p><%= vaccination.first_dose ? 'primera dosis' : 'segunda dosis' %></p>
+        <p><%= vaccination.first_dose ? t('first_dose') : t('second_dose') %></p>
       </div>
     <% end %>
   <% end %>
 </div>
 
 <% if patient.vaccinations.size < 2 %>
-<h2> Agregar nuevo proceso de vacunación </h2>
+<h2> <%= t('vaccinations.add_vaccinations') %></h2>
 <%= render partial: "vaccinations/form", locals: {patient: patient} %>
 <% end %>
