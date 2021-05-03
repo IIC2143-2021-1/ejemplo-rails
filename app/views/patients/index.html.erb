@@ -1,8 +1,6 @@
-<h1> All patients </h1>
-<p><%= link_to 'Add new Patient', new_patient_path %></p>
-<div style="display: flex; flex-flow: row wrap; ">
+<div class="patient-list">
   <% @patients.each do |patient| %>
-  <div style="border: solid 1px; width: 200px; padding: 10px; align-text: center; margin: 5px;">
+  <div class="patient-box">
     <h3><%= link_to patient.full_name, patient_path(patient) %></h3>
     <p><%= patient.run %></p>
   </div>

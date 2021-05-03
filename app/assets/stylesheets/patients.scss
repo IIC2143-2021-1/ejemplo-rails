@@ -1,3 +1,46 @@
 // Place all the styles related to the Patients controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.patient-list {
+  display: flex;
+  flex-flow: row wrap; 
+}
+
+.patient-box {
+  background-color: #3a9ecb;
+  color: white;
+  padding: 10px;
+  border: solid 1px;
+  width: 150px;
+  margin: 2px;
+}
+
+.patient-box:hover {
+  background-color: #737373;
+  cursor: pointer;
+  transition: all .7s ease 0s;
+  -webkit-transition: all .7s ease 0s;
+  -moz-transition: all .7s ease 0s;
+  -o-transition: all .7s ease 0s;
+  -ms-transition: all .7s ease 0s;
+}
+
+.patient-box a, a:visited {
+  color: white
+}
+
+.patient-box p {
+  font-size: 14px;
+}
+
+.patient-details {
+  width: 600px;
+  padding: 0px 20px;
+  border: 1.5px solid #3a9ecb;
+  margin-bottom: 20px;
+}
+
+.patient-details h2 {
+  color: #3a9ecb;
+}

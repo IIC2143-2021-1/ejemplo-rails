@@ -1,11 +1,11 @@
 <h2> Vacunas anteriores </h2>
 
-<div style="display: flex; flex-flow: row wrap; ">
+<div class="vaccinations">
   <% if patient.vaccinations.empty? %>
     <p>No tiene procesos anteriores</p>
   <% else %>
     <% patient.vaccinations.each do |vaccination| %>
-      <div style="border: solid 1px; width: 200px; padding: 10px; align-text: center; margin: 5px;">
+      <div class="vaccination-box">
         <p><%= vaccination.vaccine %></p>
         <p><%= vaccination.appointment_date.strftime("%d/%m/%y") %></p>
         <p><%= vaccination.first_dose ? 'primera dosis' : 'segunda dosis' %></p>

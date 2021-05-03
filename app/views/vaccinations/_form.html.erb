@@ -1,17 +1,19 @@
-<%= form_with(model: [ patient, patient.vaccinations.build ], local: true) do |form| %>
-  <p> 
-    vacuna
-    <%= form.select :vaccine, options_for_select(Vaccination.vaccines.keys) %>
-  </p>
-  <p>
-    Fecha de vacunación
-    <%= form.date_field :appointment_date, max: Time.now %>
-  </p>
-  <p>
-    ¿Primera dosis?
-    <%= form.check_box :first_dose %>
-  </p>
-  <p>
-    <%= form.submit %>
-  </p>
-<% end %>
+<div class="vaccination-form-container">
+  <%= form_with(model: [ patient, patient.vaccinations.build ], local: true) do |form| %>
+    <p> 
+      vacuna
+      <%= form.select :vaccine, options_for_select(Vaccination.vaccines.keys) %>
+    </p>
+    <p>
+      Fecha de vacunación
+      <%= form.date_field :appointment_date, max: Time.now %>
+    </p>
+    <p>
+      ¿Primera dosis?
+      <%= form.check_box :first_dose %>
+    </p>
+    <p>
+      <%= form.submit 'Crear proceso', class: 'button full-width' %>
+    </p>
+  <% end %>
+</div>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>MyApp</title>
+    <title>Vacunacion</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,6 +10,21 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div id="header">
+      <div id="title">
+        <%= link_to 'Vacunación contra COVID', patients_path %>
+      </div>
+      <div id="nav">
+        <div class="nav-button"><%= link_to 'Add new Patient', new_patient_path %></div>
+        <div class="nav-button"><a href="/">Assistance</a></div>
+        <div class="nav-button"><a href="/">Learn about COVID</a></div>
+      </div>
+    </div>
+    <div id="content">
+      <%= yield %>
+    </div>
+    <div id="footer">
+      Esta aplicación está creada para el curso Ingeniería de Software 2021
+    </div>
   </body>
 </html>

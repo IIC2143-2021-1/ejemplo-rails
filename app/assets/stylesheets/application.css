@@ -13,3 +13,120 @@
  *= require_tree .
  *= require_self
  */
+
+ body {
+  font-family: 'BenchNine', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: white;
+  color: #737373;
+  margin: 0;
+  font-size: 16px;
+  margin-bottom: 150px;
+ }
+
+ a, a:visited {
+  text-decoration: none;
+ }
+
+ #header {
+  width: 100%;
+  height: 200px;
+  background-color: white;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 20px;
+ }
+
+ #content {
+   width: 100%;
+   flex-direction: column;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+ }
+
+ #footer {
+   height: 100px;
+   position: fixed;
+   bottom: 0;
+   background-color: #737373;
+   color: white;
+   text-align: center;
+   font-size: 14px;
+   width: 100%;
+   padding: 10px;
+ }
+
+ #title a {
+  font-size: 24px;
+  font-weight: 700;
+  color: #737373;
+  text-transform: uppercase;
+ }
+ 
+ #nav {
+  display: flex;
+  flex-direction: row;
+ }
+ 
+ .nav-button {
+  font-size: 18px;
+  color: #737373;
+  text-transform: uppercase;
+  padding: 14px 15px;
+ }
+
+ .nav-button a:hover {
+  color: #3a9ecb !important;
+ }
+
+ .nav-button a:visited {
+  color: #737373;
+ }
+
+ form {
+  width: 200px;
+  background-color: #3a9ecb;
+  padding: 10px 30px;
+  color: white;
+ }
+
+ .button {
+  background-color: #737373;
+  border: none;
+  padding: 10px;
+  color: white;
+  border-radius: 10px;
+  text-transform: uppercase;
+  cursor: pointer;
+ }
+
+ .full-width {
+  width: 100%;
+ }
+
+ .button:hover {
+  background-color: #4d4b4b;
+  color: #fff;
+ }
+
+ .primary-button {
+  color: #737373 !important;
+  text-transform: uppercase;
+  padding: 14px 15px;
+ }
+
+ .primary-button:hover {
+  color: #3a9ecb !important;
+ }
+
+ .actions {
+   width: 100%;
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+ }
+
+
+
